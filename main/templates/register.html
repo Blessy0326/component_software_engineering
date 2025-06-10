@@ -1,0 +1,33 @@
+<!--
+  @author Blessy 
+-->
+<!DOCTYPE html>
+<html>
+<head><title>Register</title></head>
+<body>
+  <h1>Register</h1>
+  <form>
+    <input type="checkbox" name="terms"> I accept the terms and conditions<br><br>
+    <input type="text" name="name" placeholder="Name"><br>
+    <input type="email" name="email" placeholder="Email"><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <select name="role">
+      <option value="client">Client</option>
+      <option value="provider">Provider</option>
+    </select><br><br>
+
+    <input type="text" name="captcha" placeholder="Enter CAPTCHA"><br>
+    
+    <!-- Provider-only Fields -->
+    <fieldset>
+      <legend>Provider Info (Optional)</legend>
+      <input type="text" name="specialty" placeholder="Specialty"><br>
+      <input type="text" name="experience" placeholder="Experience (years)"><br>
+      <input type="text" name="location" placeholder="Location"><br>
+      <input type="text" name="availability" placeholder="Availability"><br>
+    </fieldset><br>
+    
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>

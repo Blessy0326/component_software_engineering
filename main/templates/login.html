@@ -1,0 +1,33 @@
+{% include 'partials/_nav.html' %}
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+  <h1>Login</h1>
+
+  <form method="post" action="{% url 'login_logic' %}">
+    {% csrf_token %}
+    <label>Email (Username):</label><br>
+    <input type="text" name="username" placeholder="Email" required><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+
+    <!-- Optional: role and captcha fields (not processed by Django) -->
+    <label>Role:</label><br>
+    <select name="role">
+      <option value="client">Client</option>
+      <option value="provider">Provider</option>
+    </select><br><br>
+
+    <label>CAPTCHA:</label><br>
+    <input type="text" name="captcha" placeholder="Enter CAPTCHA"><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  {% if error %}
+    <p style="color: red;">{{ error }}</p>
+  {% endif %}
+</body>
+</html>
