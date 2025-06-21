@@ -7,9 +7,9 @@
 <body>
   <h1>Welcome, Client</h1>
   <nav>
-    <a href="book_appointment.html">Book Appointment</a> |
-    <a href="manage_bookings.html">Manage Bookings</a> |
-    <a href="index.html">Logout</a>
-  </nav>
+  <a href="{% url 'book_appointment' %}">Book Appointment</a> |
+  <a href="{% url 'manage_bookings' %}">Manage Bookings</a> |
+  <a href="{% url 'logout' %}">Logout</a>
+</nav>
 </body>
 </html>
